@@ -9,7 +9,12 @@ describe Scrabble do
   describe '#score' do
     it 'returns 0 for empty string' do
       scrabble = Scrabble.new(" ")
-      expect(scrabble.score).to eq 0
+      expect(scrabble.score(" ")).to eq 0
+    end
+
+    it 'returns 1 for the letter a' do
+      scrabble = Scrabble.new("a")
+      expect(scrabble.score("a")).to eq 1
     end
   end
 end
