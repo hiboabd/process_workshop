@@ -41,5 +41,10 @@ describe Scrabble do
       scrabble = Scrabble.new("aa")
       expect(scrabble.score).to eq 2
     end
+
+    it 'returns 5 for the letter af' do
+      scrabble = Scrabble.new("af")
+      expect(scrabble.score).to eq 5
+    end
   end
 end
