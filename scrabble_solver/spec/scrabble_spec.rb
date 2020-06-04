@@ -36,5 +36,10 @@ describe Scrabble do
       scrabble = Scrabble.new("f")
       expect(scrabble.score).to eq 4
     end
+
+    it 'returns 2 for the letter aa' do
+      scrabble = Scrabble.new("aa")
+      expect(scrabble.score).to eq 2
+    end
   end
 end
