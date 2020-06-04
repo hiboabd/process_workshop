@@ -13,6 +13,7 @@ class Scrabble
     word_array.each do |letter|
       score = 0 if letter == "'\'"
       score = 1 if letter == "a"
+      score = 4 if letter == "f"
     end
     return score
   end
