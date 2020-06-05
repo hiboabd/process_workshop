@@ -22,8 +22,8 @@ describe Scrabble do
       expect(scrabble.score).to eq 0
     end
 
-    it 'returns 0 for "/s/s"' do
-      scrabble = Scrabble.new("/s/s")
+    it 'returns 0 for "\s\s"' do
+      scrabble = Scrabble.new("\s\s")
       expect(scrabble.score).to eq 0
     end
 
@@ -45,6 +45,11 @@ describe Scrabble do
     it 'returns 5 for the letter af' do
       scrabble = Scrabble.new("af")
       expect(scrabble.score).to eq 5
+    end
+
+    it 'returns 6 for the word street' do
+      scrabble = Scrabble.new('street')
+      expect(scrabble.score).to eq 6
     end
   end
 end
