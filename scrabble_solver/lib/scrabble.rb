@@ -1,17 +1,17 @@
 class Scrabble
 
-  attr_reader :word, :score
+  attr_reader :word, :score, :letters
 
   def initialize(word)
     @word = word
     @score = 0
+    @letters = @word.split('')
   end
 
   def score
     return 0 if @word == " " || @word == "nil"
-    word_array = @word.split('')
-    p "word array: #{word_array}"
-    word_array.each do |letter|
+    p "word array: #{@letters}"
+    @letters.each do |letter|
       if letter == "'\'"
         @score += 0
       elsif letter == "a" || letter == "e" || letter == "i" || letter == "o" || letter == "u" || letter == "l" || letter == "n" || letter == "r" || letter == "s" || letter == "t"
