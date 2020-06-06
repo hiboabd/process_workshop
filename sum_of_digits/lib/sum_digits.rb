@@ -9,9 +9,15 @@ class SumDigits
     calculateSum()
 
     if @sum.to_s.split('').length > 1
-      @digit_array = @sum.to_s.split('')
-      @sum = 0
-      calculateSum()
+      loop do
+        @digit_array = @sum.to_s.split('')
+        @sum = 0
+        calculateSum()
+
+        if @sum.to_s.split('').length == 1
+          break
+        end
+      end
     end
     return @sum
   end
@@ -21,5 +27,4 @@ class SumDigits
       @sum += digit.to_i
     end
   end
-
 end
