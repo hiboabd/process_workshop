@@ -10,6 +10,6 @@ class Narcissistic
       @sum += (digit.to_i ** digit_array.length)
     end
 
-    @sum == num ? true : false 
+    @sum == num ? true : false
   end
 end
