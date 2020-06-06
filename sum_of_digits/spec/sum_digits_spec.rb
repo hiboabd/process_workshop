@@ -12,6 +12,16 @@ describe SumDigits do
        sumDigits = SumDigits.new(942)
        expect(sumDigits.returnSum()).to eq(6)
      end
+
+     it 'returns 7 for 1321' do
+       sumDigits = SumDigits.new(1321)
+       expect(sumDigits.returnSum()).to eq(7)
+     end
+
+     it 'returns 6 for 132189' do
+       sumDigits = SumDigits.new(132189)
+       expect(sumDigits.returnSum()).to eq(6)
+     end 
   end
 
 end

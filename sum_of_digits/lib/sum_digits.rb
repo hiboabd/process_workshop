@@ -21,4 +21,5 @@ class SumDigits
       @sum += digit.to_i
     end
   end
+
 end
