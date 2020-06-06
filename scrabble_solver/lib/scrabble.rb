@@ -6,12 +6,27 @@ class Scrabble
     @word = word
     @score = 0
     @letters = @word.split('')
+    @scrabble_scoring = {0 => ["'\'"],
+    1 => ['a', 'e', 'i', 'o', 'l', 'n', 'r', 's', 't'],
+    2 => ['d', 'g'],
+    3 => ['b', 'c', 'm', 'p'],
+    4 => ['f', 'h', 'v', 'w', 'y'],
+    5 => ['k'],
+    8 => ['j', 'x'],
+    10 => ['q', 'z']}
   end
 
   def score
     return 0 if @word == " " || @word == "nil"
     p "word array: #{@letters}"
     @letters.each do |letter|
+      @scrabble_scoring.each do |point, letter_array|
+        if letter_array.include?(letter)
+          @score += point
+        end
+      end
+    return @score
+
       if letter == "'\'"
         @score += 0
       elsif letter == "a" || letter == "e" || letter == "i" || letter == "o" || letter == "u" || letter == "l" || letter == "n" || letter == "r" || letter == "s" || letter == "t"
