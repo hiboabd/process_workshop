@@ -5,8 +5,10 @@ class Shop {
 
   checkout(item){
     if(item === 'A'){
-      return 50; } else {
-        return 30; 
+      return 50; } else if (item === 'B'){
+        return 30;
+      } else {
+        return 20;
       }
   }
 }
