@@ -8,7 +8,7 @@ class SumDigits
   def returnSum
     calculateSum()
 
-    if @sum.to_s.split('').length > 1
+    if @sum.to_s.split('').length > 1 # if sum is not a single digit number 
       loop do
         @digit_array = @sum.to_s.split('')
         @sum = 0
