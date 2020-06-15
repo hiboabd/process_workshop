@@ -1,16 +1,13 @@
 class Shop {
   constructor(){
-
+    this.PriceTable = {'A': 50, 'B': 30, 'C': 20, 'D': 15}
   }
 
   checkout(item){
-    if(item === 'A'){
-      return 50; } else if (item === 'B'){
-        return 30;
-      } else if (item === 'C') {
-        return 20;
-      } else {
-        return 15;
+    for (var property in this.PriceTable) {
+      if (item === property) {
+        return this.PriceTable[property]
       }
+    }
   }
 }
