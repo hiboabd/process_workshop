@@ -3,7 +3,10 @@ class Shop {
 
   }
 
-  checkout(){
-    return 50;
+  checkout(item){
+    if(item === 'A'){
+      return 50; } else {
+        return 30; 
+      }
   }
 }
