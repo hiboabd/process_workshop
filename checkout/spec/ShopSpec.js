@@ -22,5 +22,9 @@ describe('Shop', () => {
     it('returns 15 for D', () => {
       expect(shop.checkout('D')).toEqual(15);
     });
+
+    it('returns 80 for AB', () => {
+      expect(shop.checkout('AB')).toEqual(80);
+    });
   });
 });
